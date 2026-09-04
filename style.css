@@ -1,0 +1,48 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  background-color: rgb(231, 255, 189);
+  padding: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  background-color: rgb(250, 157, 103);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  border: 2px solid black;
+  box-shadow: 2.5px 2.5px 2.5px black;
+}
+
+section {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 5px black;
+}
+form{
+
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+
+
+}
+h2 {
+  text-align: left;
+}
+.summary-item{
+  display: flex;
+  justify-content: space-between;
+  
+}
