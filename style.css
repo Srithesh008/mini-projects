@@ -30,19 +30,15 @@ section {
   background-color: antiquewhite;
   box-shadow: 2px 2px 5px black;
 }
-form{
-
+form {
   display: flex;
   flex-direction: column;
-  gap:10px;
-
-
+  gap: 10px;
 }
 h2 {
   text-align: left;
 }
-.summary-item{
+.summary-item {
   display: flex;
   justify-content: space-between;
-  
 }
