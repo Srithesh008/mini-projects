@@ -1,5 +1,26 @@
 const expenseForm = document.getElementById("expense-form");
+const list_expenses = document.querySelector("#expense-list");
+const total_expenses = document.querySelector("#expenses-count");
 const expenses = [];
+
+const renderExpense = function (expense) {
+  const x = document.createElement("div");
+
+  const name_element = document.createElement("p");
+  const amount_element = document.createElement("p");
+  const cat_element = document.createElement("p");
+  const date_element = document.createElement("p");
+  name_element.textContent = expense.name;
+  amount_element.textContent = expense.amount;
+  cat_element.textContent = expense.category;
+  date_element.textContent = expense.date;
+  x.append(name_element);
+  x.append(amount_element);
+  x.append(cat_element);
+  x.append(date_element);
+
+  list_expenses.append(x);
+};
 expenseForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -21,8 +42,13 @@ expenseForm.addEventListener("submit", function (event) {
   };
 
   expenses.push(expense);
+  renderExpense(expense);
 
-  console.log(expenses);
+  const expenses_length = expenses.length;
+
+  total_expenses.textContent = expenses_length;
 
   console.log("Form Submited");
 });
+
+console.log(list_expenses);
