@@ -1,6 +1,7 @@
 const expenseForm = document.getElementById("expense-form");
 const list_expenses = document.querySelector("#expense-list");
 const total_expenses = document.querySelector("#expenses-count");
+const exp = document.querySelector("#total-expenses");
 const expenses = [];
 
 const renderExpense = function (expense) {
@@ -48,7 +49,17 @@ expenseForm.addEventListener("submit", function (event) {
 
   total_expenses.textContent = expenses_length;
 
+  const total_amount = expenses.reduce(function (a, b) {
+    return a + b.amount;
+  }, 0);
+  exp.textContent = total_amount;
+
   console.log("Form Submited");
 });
 
 console.log(list_expenses);
+
+const amounts = [100, 250, 50, 300];
+amounts.reduce(function (a, b) {
+  return a + b;
+}, 0);
