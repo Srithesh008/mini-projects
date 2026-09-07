@@ -35,6 +35,18 @@ expenseForm.addEventListener("submit", function (event) {
   console.log(catInput.value);
   console.log(dateInput.value);
 
+  if (nameInput.value === "") {
+    alert("Please enter expense name...");
+    return;
+  }
+  if (Number(amtInput.value) <= 0) {
+    alert("Please enter a valid amount...");
+    return;
+  }
+  if (dateInput.value === "") {
+    alert("Please select a date...");
+    return;
+  }
   const expense = {
     name: nameInput.value,
     amount: Number(amtInput.value),
@@ -55,11 +67,7 @@ expenseForm.addEventListener("submit", function (event) {
   exp.textContent = total_amount;
 
   console.log("Form Submited");
+  expenseForm.reset();
 });
 
 console.log(list_expenses);
-
-const amounts = [100, 250, 50, 300];
-amounts.reduce(function (a, b) {
-  return a + b;
-}, 0);
